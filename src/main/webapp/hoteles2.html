@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <!-- Site made with Mobirise Website Builder v4.7.6, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v4.7.6, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/logo-corporativo-unir-1-122x60.jpg" type="image/x-icon">
+  <meta name="description" content="Site Builder Description">
+  <title>hoteles</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/tether/tether.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/datatables/data-tables.bootstrap4.min.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+</head>
+<?php
+
+/**
+ * List all users with a link to edit
+ */
+
+require "pdo/config.php";
+require "pdo/common.php";
+
+try {
+  $connection = new PDO($dsn, $username, $password, $options);
+
+  $sql = "SELECT * FROM hoteles";
+
+  $statement = $connection->prepare($sql);
+  $statement->execute();
+
+  $result = $statement->fetchAll();
+} catch(PDOException $error) {
+  echo $sql . "<br>" . $error->getMessage();
+}
+?>
+<body>
+  <section class="mbr-section info1 cid-qTzdVoeZ1x" id="info1-n">
+
+    
+
+    
+    <div class="container">
+        <div class="row justify-content-center content-row">
+            <div class="media-container-column title col-12 col-lg-7 col-md-6">
+                <h3 class="mbr-section-subtitle align-left mbr-light pb-3 mbr-fonts-style display-5">
+                    Barcelona</h3>
+                <h2 class="align-left mbr-bold mbr-fonts-style display-2">
+                    HOTELES&nbsp;</h2>
+            </div>
+            <div class="media-container-column col-12 col-lg-3 col-md-4">
+                <div class="mbr-section-btn align-right py-4"><a class="btn btn-primary display-4" href="contenido.html"><span class="mbri-undo mbr-iconfont mbr-iconfont-btn"></span>Volver</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="engine"><a href="https://mobirise.me/o">one page web templates</a></section><section class="mbr-section article content1 cid-qTDcucu2Kk" id="content1-16">
+    
+     
+
+    <div class="container">
+        <div class="media-container-row">
+            <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7"><strong>Barcelona es un lugar lleno de encantos y lugares donde perderse. Todo su patrimonio histórico y artístico no pasa desapercibido por sus visitantes. Esta ciudad te ofrecerá una amplia agenda cultural llena de museos, esculturas al aire libre, exposiciones, y otras actividades como: música, teatro y danza.
+</strong><div><strong>
+</strong></div><div><strong>Si decides visitar esta fantástica ciudad, aquí encontrarás algunos de los mejores hoteles de lujo mejor valorados de Barcelona.</strong></div></div>
+        </div>
+    </div>
+</section>
+
+<section class="features17 cid-qTzdqtK1IP" id="features17-k">
+    
+    
+
+    
+    <div class="container-fluid">
+        <div class="media-container-row">
+            <div class="card p-3 col-12 col-md-6 col-lg-2">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="assets/images/01.jpg" alt="Mobirise">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7">
+                            No Coding
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            Mobirise is an easy website builder - just drop site elements to your page, add content and style it to look the way you like.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 col-12 col-md-6 col-lg-2">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="assets/images/02.jpg" alt="Mobirise">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7">
+                            Mobile Friendly
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            All sites you make with Mobirise are mobile-friendly. You don't have to create a special mobile version of your site.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 col-12 col-md-6 col-lg-2">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="assets/images/03.jpg" alt="Mobirise">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7">
+                            Unique Styles
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            Mobirise offers many site blocks in several themes, and though these blocks are pre-made, they are flexible.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-3 col-12 col-md-6 col-lg-2">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="assets/images/04.jpg" alt="Mobirise">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7">
+                            Unlimited Sites
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                           Mobirise gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card p-3 col-12 col-md-6 col-lg-2">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="assets/images/01.jpg" alt="Mobirise">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7">
+                            No Coding
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            Mobirise is an easy website builder - just drop site elements to your page, add content and style it to look the way you like.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="card p-3 col-12 col-md-6 col-lg-2">
+                <div class="card-wrapper">
+                    <div class="card-img">
+                        <img src="assets/images/02.jpg" alt="Mobirise">
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title pb-3 mbr-fonts-style display-7">
+                            Mobile Friendly
+                        </h4>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            All sites you make with Mobirise are mobile-friendly. You don't have to create a special mobile version of your site.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-table cid-qTzdYzCsZj" id="table1-o">
+
+  
+  
+  <div class="container container-table">
+      <h2 class="mbr-section-title mbr-fonts-style align-center pb-3 display-2">
+          Relacion de Hoteles</h2>
+      <h3 class="mbr-section-subtitle mbr-fonts-style align-center pb-5 mbr-light display-5">
+            Resumen de los principales hoteles de la ciudad. Clasificados por precio y valoración</h3>
+      <div class="table-wrapper">
+        <div class="container">
+          <div class="row search">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <div class="dataTables_filter">
+                  <label class="searchInfo mbr-fonts-style display-7">Search:</label>
+                  <input class="form-control input-sm" disabled="">
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container scroll">
+          <table class="table isSearch" cellspacing="0">
+            <thead>
+              <tr class="table-heads ">
+                  
+                  
+                  
+                  
+              <th class="head-item mbr-fonts-style display-7">
+                      NAME</th><th class="head-item mbr-fonts-style display-7">
+                      AGE</th><th class="head-item mbr-fonts-style display-7">
+                      AGE</th><th class="head-item mbr-fonts-style display-7">
+                      AGE</th><th class="head-item mbr-fonts-style display-7">
+                      AGE</th></tr>
+            </thead>
+
+            <tbody>
+              
+             <?php foreach ($result as $row) : ?>
+              
+              
+            <tr> 
+                
+     
+                
+                
+                
+              <td class="body-item mbr-fonts-style display-7"><?php echo escape($row["nombre"]); ?></td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">70</td>
+			  </tr>
+			      <?php endforeach; ?>
+			  </tbody>
+          </table>
+        </div>
+        <div class="container table-info-container">
+          <div class="row info">
+            <div class="col-md-6">
+              <div class="dataTables_info mbr-fonts-style display-7">
+                <span class="infoBefore">Showing</span>
+                <span class="inactive infoRows"></span>
+                <span class="infoAfter">entries</span>
+                <span class="infoFilteredBefore">(filtered from</span>
+                <span class="inactive infoRows"></span>
+                <span class="infoFilteredAfter"> total entries)</span>
+              </div>
+            </div>
+            <div class="col-md-6"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/popper/popper.min.js"></script>
+  <script src="assets/tether/tether.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/datatables/jquery.data-tables.min.js"></script>
+  <script src="assets/datatables/data-tables.bootstrap4.min.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+</body>
+</html>
