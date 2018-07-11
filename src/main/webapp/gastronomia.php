@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v4.7.6, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/logo-corporativo-unir-1-248x123.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/images/logo-corporativo-unir-1-122x60.jpg" type="image/x-icon">
   <meta name="description" content="Website Builder Description">
   <title>gastronomia</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
@@ -21,6 +21,29 @@
   
   
 </head>
+<?php
+
+/**
+ * List all users with a link to edit
+ */
+
+require "gdatos/config.php";
+require "gdatos/common.php";
+
+try {
+  $connection = new PDO($dsn, $username, $password, $options);
+
+  $sql = "SELECT * FROM gastronomia";
+
+  $statement = $connection->prepare($sql);
+  $statement->execute();
+
+  $result = $statement->fetchAll();
+} catch(PDOException $error) {
+  echo $sql . "<br>" . $error->getMessage();
+}
+?>
+
 <body>
   <section class="mbr-section info1 cid-qTzmjIIX31" id="info1-v">
 
@@ -42,7 +65,7 @@
     </div>
 </section>
 
-<section class="engine"><a href="https://mobirise.me/d">site maker</a></section><section class="mbr-section article content1 cid-qTzmA0tB8i" id="content1-w">
+<section class="engine"><a href="https://mobirise.me/i">web creation software</a></section><section class="mbr-section article content1 cid-qTzmA0tB8i" id="content1-w">
     
      
 
@@ -240,46 +263,27 @@
                   
                   
               <th class="head-item mbr-fonts-style display-7">
-                      NAME</th><th class="head-item mbr-fonts-style display-7">
-                      AGE</th><th class="head-item mbr-fonts-style display-7">
-                      DATE</th><th class="head-item mbr-fonts-style display-7">
-                      SALARY</th><th class="head-item mbr-fonts-style display-7">
-                      SALARY</th><th class="head-item mbr-fonts-style display-7">
-                      SALARY</th><th class="head-item mbr-fonts-style display-7">
-                      SALARY</th></tr>
+                      Restaurante</th><th class="head-item mbr-fonts-style display-7">
+                      Direccion</th><th class="head-item mbr-fonts-style display-7">
+                      Precio Medio</th><th class="head-item mbr-fonts-style display-7">
+                      Ubicacion</th><th class="head-item mbr-fonts-style display-7">
+                      Tipo Cocina</th><th class="head-item mbr-fonts-style display-7">
+                      Tenedores</th><th class="head-item mbr-fonts-style display-7">
+                      Valoracion</th></tr>
             </thead>
 
             <tbody>
               
-              
+              <?php foreach ($result as $row) : ?>   
               
               
             <tr> 
                 
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Jeanna Schmal</td><td class="body-item mbr-fonts-style display-7">44</td><td class="body-item mbr-fonts-style display-7">2016-10-17</td><td class="body-item mbr-fonts-style display-7">$317.000</td><td class="body-item mbr-fonts-style display-7">$317.000</td><td class="body-item mbr-fonts-style display-7">$317.000</td><td class="body-item mbr-fonts-style display-7">$317.000</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Caren Rials</td><td class="body-item mbr-fonts-style display-7">35</td><td class="body-item mbr-fonts-style display-7">2013-04-12</td><td class="body-item mbr-fonts-style display-7">$445.500</td><td class="body-item mbr-fonts-style display-7">$445.500</td><td class="body-item mbr-fonts-style display-7">$445.500</td><td class="body-item mbr-fonts-style display-7">$445.500</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Leon Rogol</td><td class="body-item mbr-fonts-style display-7">66</td><td class="body-item mbr-fonts-style display-7">2016-05-22</td><td class="body-item mbr-fonts-style display-7">$152.558</td><td class="body-item mbr-fonts-style display-7">$152.558</td><td class="body-item mbr-fonts-style display-7">$152.558</td><td class="body-item mbr-fonts-style display-7">$152.558</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr><tr>
-                
-                
-                
-                
-              <td class="body-item mbr-fonts-style display-7">Shala Barrera</td><td class="body-item mbr-fonts-style display-7">70</td><td class="body-item mbr-fonts-style display-7">2016-05-15</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td><td class="body-item mbr-fonts-style display-7">$459.146</td></tr></tbody>
+                <td class="body-item mbr-fonts-style display-7"><?php echo escape($row["restaurante"]); ?></td><td class="body-item mbr-fonts-style display-7"><?php echo escape($row["direccion"]); ?></td><td class="body-item mbr-fonts-style display-7"><?php echo escape($row["precio"]); ?></td><td class="body-item mbr-fonts-style display-7"><?php echo escape($row["ubicacion"]); ?></td><td class="body-item mbr-fonts-style display-7"><?php echo escape($row["tipococina"]); ?></td><td class="body-item mbr-fonts-style display-7"><?php echo escape($row["tenedores"]); ?></td><td class="body-item mbr-fonts-style display-7"><?php echo escape($row["valoracion"]); ?></td>
+	       
+			  </tr>
+			  <?php endforeach; ?>
+			  </tbody>
           </table>
         </div>
         <div class="container table-info-container">

@@ -34,13 +34,31 @@ try {
   $connection = new PDO($dsn, $username, $password, $options);
 
   $sql = "SELECT * FROM hoteles";
-
+  
   $statement = $connection->prepare($sql);
   $statement->execute();
 
   $result = $statement->fetchAll();
+  
+  
 } catch(PDOException $error) {
   echo $sql . "<br>" . $error->getMessage();
+}
+
+
+try {
+  $connection = new PDO($dsn, $username, $password, $options);
+
+  $sql2 = "SELECT * FROM control";
+
+  $statement2 = $connection->prepare($sql2);
+  $statement2->execute();
+
+  $result2 = $statement2->fetchAll();
+  
+  
+} catch(PDOException $error) {
+  echo $sql2 . "<br>" . $error->getMessage();
 }
 ?>
 <body>
@@ -225,7 +243,30 @@ try {
     </div>
 </section>
 
+<section class="mbr-section info1 cid-qV3ulkDwSq" id="info1-18">
 
+    
+
+    
+    <div class="container">
+        <div class="row justify-content-center content-row">
+            <div class="media-container-column title col-12 col-lg-7 col-md-6">
+                <h3 class="mbr-section-subtitle align-left mbr-light pb-3 mbr-fonts-style display-5">
+                    Nombre tabla</h3>
+				<?php foreach ($result2 as $row) : ?>
+                <h2 class="align-left mbr-bold mbr-fonts-style display-7">
+                    
+					<INPUT disabled = "disabled" type="text" name="tabla"  value ="<?php echo escape($row["control"]); ?>"> 
+														
+                </h2>
+				<?php endforeach; ?>
+            </div>
+            <div class="media-container-column col-12 col-lg-3 col-md-4">
+                <div class="mbr-section-btn align-right py-4"><a class="btn btn-primary display-4" href="#top"><span class="mbri-up mbr-iconfont mbr-iconfont-btn"></span>Top pagina</a></div>
+            </div>
+        </div>
+    </div>
+</section>
   <script src="assets/web/assets/jquery/jquery.min.js"></script>
   <script src="assets/popper/popper.min.js"></script>
   <script src="assets/tether/tether.min.js"></script>

@@ -67,7 +67,7 @@ public class testu000IT {
     @Test
     public void testSomeMethod() {
     // TODO review the generated test code and remove the default call to fail.
-    driver.get("http://192.168.100.100/");
+    driver.get("http://172.31.57.100/");
     driver.findElement(By.linkText("Conoce mas")).click();
     driver.findElement(By.linkText("ENTRAR")).click();
     driver.findElement(By.xpath("//section[@id='features17-r']/div/div/div[3]/div/div[2]/h4")).click();
