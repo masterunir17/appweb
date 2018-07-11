@@ -19,8 +19,8 @@ pipeline {
 			sh 'ssh root@172.31.57.100 cp -r /var/www/html/ /opt/lastversionweb'
 			sh 'ssh root@172.31.57.100 cp -r /var/www/gestion/ /opt/lastversiongestion'
 			// eliminar version actual
-			sh 'ssh root@172.31.57.100 rm -r /var/www/html/*'
-			sh 'ssh root@172.31.57.100 rm -r /var/www/gestion/*'
+			// sh 'ssh root@172.31.57.100 rm -r /var/www/html/*'
+			// sh 'ssh root@172.31.57.100 rm -r /var/www/gestion/*'
 			}		     
 		    }
 
